@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What's the Key Code?!</title>
+	<style>
+	.tagline{
+		font-size:15em;
+		margin: 0;		
+		text-align: center;
+	}
+	.mini-tagline{
+		font-size:5em;
+		margin: 0;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+<p class="tagline"></p>
+<p class="mini-tagline"></p>
+<script>
+	function showKey(e){
+		const p_code = document.querySelector('p.tagline');
+		const p_name = document.querySelector('p.mini-tagline');
+		p_code.innerHTML = e.keyCode;
+		p_name.innerHTML = e.key;
+	}
+	addEventListener('keydown', showKey);
+</script>
+	
+</body>
+</html>
